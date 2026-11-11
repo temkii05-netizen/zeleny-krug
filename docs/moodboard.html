@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>Мудборд — Зелёный Круг</title><link rel="stylesheet" href="style.css">
+<style>
+body{width:1600px;height:1000px;padding:40px;background:#FBF8F0}
+.g{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,1fr);gap:16px;height:920px}
+.c{border-radius:24px;overflow:hidden;position:relative;background:#fff}
+.c img{width:100%;height:100%;object-fit:cover;display:block}
+.cap{position:absolute;left:14px;bottom:12px;background:rgba(255,255,255,.9);border-radius:99px;padding:6px 12px;font:700 12px Inter;color:var(--dark)}
+.title{background:var(--dark);color:var(--cream);padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.title h1{font-size:46px;color:var(--cream)}
+.kw{display:flex;flex-wrap:wrap;gap:8px;padding:22px;align-content:center;background:var(--mint)}
+.kw span{background:#fff;border-radius:99px;padding:8px 14px;font:700 15px Inter;color:var(--dark)}
+.pal{display:flex}
+.pal div{flex:1}
+.type{padding:22px;background:var(--cream);display:flex;flex-direction:column;justify-content:center}
+.type b{font:900 92px "Inter Display";color:var(--dark);line-height:1}
+.type p{font:500 14px Inter;color:var(--muted);margin-top:8px}
+</style></head><body>
+<div class="g">
+  <div class="c title" style="grid-column:1/3;grid-row:1/2"><span class="tag" style="background:var(--pumpkin);align-self:flex-start">мудборд</span><h1 class="display">Свежо. Честно.<br>По кругу.</h1></div>
+  <div class="c" style="grid-column:3/5;grid-row:1/3"><img src="assets/pack_3d.png" style="object-position:40% 50%"><span class="cap">стекло + крафт + наклейка-этикетка</span></div>
+  <div class="c" style="grid-column:5/7;grid-row:1/2"><img src="assets/pattern_preview.svg"><span class="cap">паттерн из элементов знака</span></div>
+  <div class="c kw" style="grid-column:1/3;grid-row:2/3"><span>многоразово</span><span>без пластика</span><span>фермерское</span><span>доверие</span><span>забота о городе</span><span>цикл</span><span>стекло</span><span>лён</span><span>крафт</span><span>дружелюбно</span><span>просто</span></div>
+  <div class="c" style="grid-column:5/6;grid-row:2/4"><img src="assets/tex_glass.png"><span class="cap">стекло</span></div>
+  <div class="c" style="grid-column:6/7;grid-row:2/3"><img src="assets/tex_kraft.png"><span class="cap">крафт</span></div>
+  <div class="c" style="grid-column:6/7;grid-row:3/4"><img src="assets/tex_linen.png"><span class="cap">лён</span></div>
+  <div class="c" style="grid-column:1/2;grid-row:3/5;background:#E6F0DE"><img src="assets/mascot_hero.png" style="object-position:50% 40%"><span class="cap">3D-талисман</span></div>
+  <div class="c" style="grid-column:2/4;grid-row:3/4;background:#fff"><img src="assets/ill_courier.svg" style="object-fit:contain;padding:10px"><span class="cap">плоские иллюстрации с контуром</span></div>
+  <div class="c pal" style="grid-column:4/5;grid-row:3/4"><div style="background:#1F5136"></div><div style="background:#5DBB63"></div><div style="background:#F6F1E4"></div><div style="background:#F4A93B"></div></div>
+  <div class="c type" style="grid-column:2/4;grid-row:4/5"><b>Аа Бб</b><p>Inter Display Black — заголовки · Inter — текст</p></div>
+  <div class="c" style="grid-column:4/5;grid-row:4/5;background:#FCE7D2"><img src="assets/sticker_nyam.png" style="object-fit:contain"></div>
+  <div class="c" style="grid-column:5/7;grid-row:4/5"><img src="assets/ill_jars.svg" style="object-fit:contain;background:#fff"><span class="cap">продукты в банках</span></div>
+</div>
+</body></html>

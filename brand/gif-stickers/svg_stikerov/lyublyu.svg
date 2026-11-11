@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -40 300 400" width="300" height="400">
+<defs><clipPath id="bc"><rect x="70" y="118" width="160" height="186" rx="54"/></clipPath></defs>
+<ellipse cx="150" cy="336" rx="80" ry="10" fill="#1F5136" opacity="0.15"/>
+<g transform="translate(0,0) translate(150,330) scale(1.000,1.000) translate(-150,-330)">
+ <ellipse cx="116" cy="318" rx="22" ry="13" fill="#1F5136"/>
+ <ellipse cx="184" cy="318" rx="22" ry="13" fill="#1F5136"/>
+ <path d="M76,215 Q48.0,193.5 36,160" stroke="#1F5136" stroke-width="15" stroke-linecap="round" fill="none"/><circle cx="36" cy="160" r="12" fill="#1F5136"/>
+ <path d="M224,215 Q252.0,193.5 264,160" stroke="#1F5136" stroke-width="15" stroke-linecap="round" fill="none"/><circle cx="264" cy="160" r="12" fill="#1F5136"/>
+ <rect x="100" y="98" width="100" height="30" rx="8" fill="#C6EBCF" stroke="#1F5136" stroke-width="6"/>
+ <rect x="70" y="118" width="160" height="186" rx="54" fill="#C6EBCF" stroke="#1F5136" stroke-width="6"/>
+ <g clip-path="url(#bc)"><rect x="60" y="238" width="180" height="46" fill="#F6F1E4"/>
+   <line x1="60" y1="238" x2="240" y2="238" stroke="#1F5136" stroke-width="4"/>
+   <line x1="60" y1="284" x2="240" y2="284" stroke="#1F5136" stroke-width="4"/>
+   <circle cx="150" cy="261" r="13" fill="#5DBB63" stroke="#1F5136" stroke-width="3"/></g>
+ <rect x="70" y="118" width="160" height="186" rx="54" fill="none" stroke="#1F5136" stroke-width="6"/>
+ <rect x="86" y="140" width="11" height="48" rx="5.5" fill="#fff" opacity="0.65"/>
+ <g transform="rotate(0,150,72)">
+  <path d="M150,72 Q148,52 152,36" stroke="#1F5136" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M152,38 Q170,14 196,24 Q180,48 152,38Z" fill="#5DBB63" stroke="#1F5136" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M150,42 Q132,24 112,32 Q126,52 150,42Z" fill="#5DBB63" stroke="#1F5136" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <rect x="86" y="68" width="128" height="36" rx="11" fill="#5DBB63" stroke="#1F5136" stroke-width="6"/>
+ <line x1="100" y1="76" x2="100" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="112" y1="76" x2="112" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="124" y1="76" x2="124" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="136" y1="76" x2="136" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="148" y1="76" x2="148" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="160" y1="76" x2="160" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="172" y1="76" x2="172" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="184" y1="76" x2="184" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="196" y1="76" x2="196" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/><line x1="208" y1="76" x2="208" y2="96" stroke="#1F5136" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+ <path d="M122,182 C100,168 112,150 122,162 C132,150 144,168 122,182 Z" fill="#E8505B"/><path d="M178,182 C156,168 168,150 178,162 C188,150 200,168 178,182 Z" fill="#E8505B"/>
+ <ellipse cx="104" cy="194" rx="11" ry="7" fill="#F59C8B" opacity="0.9"/>
+ <ellipse cx="196" cy="194" rx="11" ry="7" fill="#F59C8B" opacity="0.9"/>
+ <path d="M134,190 Q150,212 166,190 Z" fill="#14271C"/><path d="M141,200 Q150,206 159,200 Q150,196 141,200Z" fill="#F59C8B"/>
+ 
+</g><g transform="translate(250,50) scale(1.4)" opacity="1"><path d="M0,10 C-22,-4 -12,-24 0,-10 C12,-24 22,-4 0,10Z" fill="#E8505B" stroke="#1F5136" stroke-width="3"/></g><g transform="translate(50,60) scale(1.0)" opacity="1"><path d="M0,10 C-22,-4 -12,-24 0,-10 C12,-24 22,-4 0,10Z" fill="#E8505B" stroke="#1F5136" stroke-width="3"/></g><g transform="translate(200,-5) scale(0.8)" opacity="1"><path d="M0,10 C-22,-4 -12,-24 0,-10 C12,-24 22,-4 0,10Z" fill="#E8505B" stroke="#1F5136" stroke-width="3"/></g></svg>

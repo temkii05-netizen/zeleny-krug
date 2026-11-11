@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>Зелёный Круг — продукты в многоразовой таре</title>
+<link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="style.css">
+<style>
+body{width:1440px}
+.wrap{width:1240px;margin:0 auto}
+.topbar{background:var(--dark);color:var(--cream);font:600 14px Inter;text-align:center;padding:10px 0}
+.topbar b{color:var(--pumpkin)}
+header{display:flex;align-items:center;gap:36px;height:96px}
+header img{height:58px}
+nav{display:flex;gap:28px;font:600 16px Inter}
+nav a{color:var(--ink);text-decoration:none}
+nav a.on{color:var(--dark);box-shadow:inset 0 -3px 0 var(--green);padding-bottom:6px}
+.hdr-right{margin-left:auto;display:flex;gap:12px;align-items:center}
+.search{width:250px;height:48px;font-size:15px}
+.cart{position:relative;width:48px;height:48px;border-radius:50%;background:var(--dark);display:grid;place-items:center}
+.cart i{position:absolute;top:-4px;right:-4px;background:var(--pumpkin);color:var(--ink);font:800 12px Inter;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center;padding:40px 0 70px}
+.hero h1 span{color:var(--green)}
+.hero p.lead{margin:26px 0 34px;max-width:540px}
+.hero .ctas{display:flex;gap:14px}
+.facts{display:flex;gap:34px;margin-top:44px}
+.facts div{font:500 14px Inter;color:var(--muted)}
+.facts b{display:block;font:900 30px "Inter Display";color:var(--dark);letter-spacing:-.02em}
+.stage{position:relative;height:580px}
+.stage .disc{position:absolute;inset:30px 20px 10px 40px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#DDF2DF,#BFE3C4)}
+.stage .ring{position:absolute;inset:6px -4px -14px 16px;border-radius:50%;border:18px solid var(--dark);clip-path:polygon(0 0,62% 0,62% 30%,100% 30%,100% 100%,0 100%)}
+.stage .m3d{position:absolute;left:70px;top:40px;width:520px}
+.stage .st{position:absolute;width:150px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12))}
+.bubble{position:absolute;background:#fff;border-radius:20px;padding:14px 18px;font:600 15px Inter;box-shadow:0 14px 30px rgba(20,39,28,.12);display:flex;gap:10px;align-items:center}
+.bubble .dot{width:36px;height:36px;border-radius:50%;background:var(--pumpkin);display:grid;place-items:center;font:900 16px "Inter Display"}
+section{padding:90px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:#fff;border-radius:var(--r-lg);padding:30px 26px;position:relative;border:1.5px solid #ECE6D6}
+.step img{width:76px;height:76px}
+.step .n{position:absolute;top:24px;right:26px;font:900 46px "Inter Display";color:#EDE7D7}
+.step h3{margin:18px 0 8px}
+.step p{color:var(--muted);line-height:1.5;font-size:15px}
+.cat{background:#fff;border-radius:48px;padding:70px 60px}
+.chips{display:flex;gap:10px;margin-bottom:34px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prod{background:var(--cream);border-radius:var(--r-lg);padding:16px;border:0}
+.prod .im{height:200px;border-radius:20px;background:#fff;display:grid;place-items:center;overflow:hidden;position:relative}
+.prod .im img{height:190px}
+.prod .im .tag{position:absolute;left:12px;top:12px;height:28px;font-size:11px}
+.prod h4{font:800 19px "Inter Display";margin:16px 4px 4px}
+.prod .meta{font:500 14px Inter;color:var(--muted);margin:0 4px 16px}
+.prod .row{display:flex;align-items:center;justify-content:space-between;margin:0 4px}
+.prod .price{font:900 22px "Inter Display"} .prod .price small{font:600 13px Inter;color:var(--muted);display:block}
+.eco{background:linear-gradient(90deg,#1F5136 0,#1F5136 48%,rgba(31,81,54,.55) 75%,rgba(31,81,54,.3)),url(assets/pattern_dark_preview.svg) center/960px,#1F5136;border-radius:48px;color:var(--cream);padding:80px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.eco h2{color:var(--cream)} .eco h2 span{color:var(--pumpkin)}
+.eco p{color:#CFE0D3;font-size:18px;line-height:1.55;margin:22px 0 30px;max-width:540px}
+.eco .nums{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.eco .num{background:rgba(246,241,228,.08);border:1.5px solid rgba(246,241,228,.2);border-radius:24px;padding:24px;backdrop-filter:blur(4px);background-color:#1F5136}
+.eco .num b{font:900 44px "Inter Display";color:var(--pumpkin);display:block;letter-spacing:-.02em}
+.eco .num span{font-size:15px;color:#CFE0D3}
+.sub{display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:center;background:var(--pumpkin);border-radius:48px;padding:50px 70px}
+.sub img{width:260px}
+.sub form{display:flex;gap:12px;margin-top:24px;max-width:560px}
+.sub .input{border-color:transparent}
+footer{background:var(--ink);color:#C9D3CC;padding:60px 0 40px;margin-top:90px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h5{font:800 15px Inter;color:#fff;margin-bottom:14px}
+footer li{list-style:none;font-size:15px;margin-bottom:10px}
+footer .bot{border-top:1px solid #2B3D31;margin-top:40px;padding-top:24px;font-size:13px;display:flex;justify-content:space-between}
+</style></head><body>
+<div class="topbar">Бесплатная доставка от 2 000 ₽ · Залог за банку возвращаем на бонусный счёт · <b>Тара едет по кругу</b></div>
+<div class="wrap">
+<header>
+  <img src="assets/logo_horizontal.svg" alt="Зелёный Круг">
+  <nav><a class="on" data-go="catalog">Каталог</a><a data-go="how">Как это работает</a><a data-go="eco">Тара</a><a data-go="sub">Подписка</a><a data-go="footer">О нас</a></nav>
+  <div class="hdr-right">
+    <input id="search" class="input search" placeholder="⌕  Гречка, молоко, орехи…">
+    <button class="btn btn-secondary btn-sm" data-toast="Личный кабинет появится в следующей версии">Войти</button>
+    <div class="cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F6F1E4" stroke-width="2.4" stroke-linecap="round"><path d="M5 8h14l-1.5 12h-11z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><i id="cartCount">3</i></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div>
+    <span class="tag">● без одноразового пластика</span>
+    <h1 class="display" style="margin-top:22px">Продукты в банках, которые <span>возвращаются по&nbsp;кругу</span></h1>
+    <p class="lead">Привозим крупы, молочку, орехи и овощи в стеклянной таре. В следующий раз курьер заберёт пустые банки — мы их помоем и снова наполним.</p>
+    <div class="ctas"><button class="btn btn-primary" data-go="catalog">Собрать заказ →</button><button class="btn btn-secondary" data-go="how">Как это работает</button></div>
+    <div class="facts"><div><b>300+</b>товаров в таре</div><div><b>50 ₽</b>залог за банку</div><div><b>2 часа</b>доставка по городу</div></div>
+  </div>
+  <div class="stage">
+    <div class="disc"></div><div class="ring"></div>
+    <img class="m3d" src="assets/mascot_wave.png">
+    <img class="st" src="assets/sticker_vozvrat.png" style="left:-10px;top:330px;transform:rotate(-8deg)">
+    <div class="bubble" style="right:0;top:60px"><div class="dot">↻</div><div>Курьер забрал<br><b>6 пустых банок</b></div></div>
+    <div class="bubble" style="right:30px;bottom:50px"><div class="dot" style="background:var(--green)">✓</div><div>Привет! Я Кругляш —<br>слежу, чтобы тара вернулась</div></div>
+  </div>
+</div>
+</div>
+
+<section id="how" style="padding-top:20px"><div class="wrap">
+  <div class="sec-head"><h2 class="display">Как это работает</h2><p class="lead" style="max-width:420px;font-size:17px">Четыре шага — и ни одного пакета в мусорке.</p></div>
+  <div class="steps">
+    <div class="step"><span class="n">01</span><img src="assets/icon_order.svg"><h3>Собираете заказ</h3><p>Выбираете продукты на сайте или в приложении. Всё уже разложено по банкам.</p></div>
+    <div class="step"><span class="n">02</span><img src="assets/icon_deliver.svg"><h3>Привозим в таре</h3><p>Курьер на электровелосипеде доставит заказ в удобный двухчасовой интервал.</p></div>
+    <div class="step"><span class="n">03</span><img src="assets/icon_return.svg"><h3>Отдаёте пустые банки</h3><p>При следующей доставке курьер заберёт тару, а залог вернётся бонусами.</p></div>
+    <div class="step"><span class="n">04</span><img src="assets/icon_wash.svg"><h3>Мы моем и наполняем</h3><p>Банки проходят мойку и стерилизацию и снова отправляются по кругу.</p></div>
+  </div>
+</div></section>
+
+<div class="wrap" id="catalog"><div class="cat">
+  <div class="sec-head" style="margin-bottom:24px"><h2 class="display">Популярное на неделе</h2><button class="btn btn-ghost" data-toast="Полный каталог — 300+ товаров — в следующей версии">Весь каталог →</button></div>
+  <div class="chips"><span class="chip active" data-f="all">Все</span><span class="chip" data-f="krupy">Крупы</span><span class="chip" data-f="moloko">Молочное</span><span class="chip" data-f="orehi">Орехи и сухофрукты</span><span class="chip" data-f="ovoshi">Овощи</span><span class="chip" data-f="bakaleya">Бакалея</span></div>
+  <div class="grid4">
+    <div class="prod" data-cat="krupy orehi bakaleya"><div class="im"><span class="tag">хит</span><img src="assets/ill_jars.svg"></div><h4>Гречка ядрица</h4><div class="meta">600 г · банка 0,9 л</div><div class="row"><div class="price">189 ₽<small>+ залог 50 ₽</small></div><button class="btn btn-primary btn-sm" data-add="Гречка ядрица">В корзину</button></div></div>
+    <div class="prod" data-cat="moloko"><div class="im"><span class="tag" style="background:#FCE7D2">фермерское</span><img src="assets/ill_milk.svg"></div><h4>Молоко 3,2%</h4><div class="meta">1 л · стеклянная бутылка</div><div class="row"><div class="price">129 ₽<small>+ залог 40 ₽</small></div><button class="btn btn-primary btn-sm" data-add="Молоко 3,2%">В корзину</button></div></div>
+    <div class="prod" data-cat="ovoshi"><div class="im"><img src="assets/ill_bag.svg"></div><h4>Овощной набор</h4><div class="meta">≈ 3 кг · хлопковая сумка</div><div class="row"><div class="price">590 ₽<small>сумка — в подарок</small></div><button class="btn btn-primary btn-sm" data-add="Овощной набор">В корзину</button></div></div>
+    <div class="prod" data-cat="krupy moloko ovoshi"><div class="im"><span class="tag">новинка</span><img src="assets/ill_courier.svg" style="height:170px"></div><h4>Подписка «Круг недели»</h4><div class="meta">набор на 2 человек · раз в неделю</div><div class="row"><div class="price">2 490 ₽<small>в неделю</small></div><button class="btn btn-accent btn-sm" data-add="Подписка «Круг недели»">Оформить</button></div></div>
+  </div>
+  <p id="empty" style="display:none;padding:40px 0;text-align:center;color:var(--muted);font-size:18px">Скоро здесь появятся товары — Кругляш уже моет банки</p>
+</div></div>
+
+<section id="eco"><div class="wrap"><div class="eco">
+  <div><span class="tag" style="background:var(--pumpkin)">наш круг</span>
+    <h2 class="display" style="margin-top:20px">Одна банка — <span>десятки</span> заказов</h2>
+    <p>Мы считаем каждую тару, которая вернулась к нам. Чем больше людей в круге, тем меньше одноразовой упаковки в городе.</p>
+    <button class="btn btn-accent" data-toast="Залог 50 ₽ за банку возвращается бонусами, когда курьер забирает тару">Узнать про залог</button></div>
+  <div class="nums">
+    <div class="num"><b>12 480</b><span>банок вернулись в круг в этом месяце</span></div>
+    <div class="num"><b>до 40</b><span>раз служит одна банка</span></div>
+    <div class="num"><b>0</b><span>пластиковых пакетов в заказе</span></div>
+    <div class="num"><b>3 400</b><span>семей уже в круге</span></div>
+  </div>
+</div></div></section>
+
+<div class="wrap" id="sub"><div class="sub">
+  <img src="assets/sticker_privet.png">
+  <div><h2 class="display">Кругляш напомнит,<br>когда пора вернуть тару</h2>
+    <p class="lead" style="color:#4A3A1E;margin-top:14px">Раз в неделю — сезонные продукты, рецепты и скидка 10% на первый заказ.</p>
+    <form id="subForm" novalidate><input class="input" type="email" placeholder="Ваш e-mail"><button class="btn btn-primary" type="submit">Подписаться</button></form></div>
+</div></div>
+
+<footer id="footer"><div class="wrap">
+  <div class="cols">
+    <div><img src="assets/logo_horizontal_dark.svg" style="height:64px;border-radius:12px"><p style="margin-top:16px;line-height:1.6;font-size:14px">Сервис доставки продуктов в многоразовой таре. Учебный проект.</p></div>
+    <div><h5>Покупателям</h5><ul><li>Каталог</li><li>Доставка и оплата</li><li>Залог за тару</li><li>Подписка</li></ul></div>
+    <div><h5>Компания</h5><ul><li>О нас</li><li>Производителям</li><li>Вакансии</li><li>Контакты</li></ul></div>
+    <div><h5>Мы в соцсетях</h5><ul><li>ВКонтакте</li><li>Telegram</li><li>8 800 000-00-00</li><li>hello@zelkrug.ru</li></ul></div>
+  </div>
+  <div class="bot"><span>© 2026 «Зелёный Круг»</span><span>Политика конфиденциальности</span></div>
+</div></footer>
+
+<div class="toast-box" id="toast"><div class="d">✓</div><span id="toastText"></span></div>
+<script>
+const toast=(t)=>{const b=document.getElementById('toast');document.getElementById('toastText').textContent=t;b.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(()=>b.classList.remove('show'),2600)};
+const go=(id)=>document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();go(el.dataset.go)}));
+let cart=Number(document.getElementById('cartCount')?.textContent||0);
+document.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>{
+  cart++;const c=document.getElementById('cartCount');if(c){c.textContent=cart;c.parentElement.classList.remove('bump');void c.offsetWidth;c.parentElement.classList.add('bump')}
+  const old=b.textContent;b.textContent='✓ Добавлено';b.classList.add('done');setTimeout(()=>{b.textContent=old;b.classList.remove('done')},1400);
+  toast(b.dataset.add+' — в корзине. Тара поедет по кругу!')}));
+document.querySelectorAll('.chips .chip').forEach(ch=>ch.addEventListener('click',()=>{
+  document.querySelectorAll('.chips .chip').forEach(c=>c.classList.remove('active'));ch.classList.add('active');
+  const f=ch.dataset.f;let n=0;
+  document.querySelectorAll('.prod').forEach(p=>{const ok=f==='all'||p.dataset.cat.split(' ').includes(f);p.style.display=ok?'':'none';if(ok)n++});
+  const e=document.getElementById('empty');if(e)e.style.display=n?'none':'block'}));
+document.querySelectorAll('[data-toast]').forEach(b=>b.addEventListener('click',()=>toast(b.dataset.toast)));
+const cartBtn=document.querySelector('.cart');if(cartBtn)cartBtn.addEventListener('click',()=>toast('В корзине товаров: '+cart));
+const f=document.getElementById('subForm');if(f)f.addEventListener('submit',e=>{e.preventDefault();const i=f.querySelector('input');
+  if(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value)){i.classList.remove('error');toast('Готово! Кругляш напишет на '+i.value);i.value=''}
+  else{i.classList.add('error');toast('Проверь адрес почты — похоже, в нём ошибка')}});
+const sr=document.getElementById('search');if(sr)sr.addEventListener('keydown',e=>{if(e.key==='Enter'){toast('Ищем «'+sr.value+'»… Поиск появится в следующей версии');}});
+</script>
+</body></html>

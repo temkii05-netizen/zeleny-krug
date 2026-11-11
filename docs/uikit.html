@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>UI Kit — Зелёный Круг</title><link rel="stylesheet" href="style.css">
+<style>
+body{width:1600px;padding:56px 64px;background:#FBF8F0}
+.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}
+.head img{height:56px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.panel{background:#fff;border-radius:28px;padding:28px;border:1.5px solid #ECE6D6}
+.panel h6{font:800 13px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.sw{display:flex;gap:12px}
+.sw div{flex:1;border-radius:18px;height:120px;padding:12px;display:flex;flex-direction:column;justify-content:flex-end;font:700 13px Inter}
+.sw small{font:500 12px Inter;opacity:.8}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.lbl{font:500 12px Inter;color:var(--muted);width:100%;margin-bottom:-4px}
+.ty div{display:flex;align-items:baseline;gap:16px;border-bottom:1px dashed #E7E1D1;padding:10px 0}
+.ty span{font:600 12px Inter;color:var(--muted);width:120px;flex:none}
+.toggle{width:52px;height:30px;border-radius:99px;background:var(--green);position:relative}
+.toggle:after{content:"";position:absolute;right:4px;top:4px;width:22px;height:22px;border-radius:50%;background:#fff}
+.toggle.off{background:#DCD5C2}.toggle.off:after{left:4px;right:auto}
+.cb{width:26px;height:26px;border-radius:8px;background:var(--dark);display:grid;place-items:center;color:#fff;font-weight:900}
+.cb.off{background:#fff;border:2px solid var(--line)}
+.radio{width:26px;height:26px;border-radius:50%;border:7px solid var(--dark)}
+.qty{display:flex;align-items:center;gap:14px;background:var(--cream);border-radius:99px;padding:6px;font:800 16px Inter}
+.qty b{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.icons img{width:64px;height:64px}
+.prod{background:var(--cream);border-radius:24px;padding:14px}
+.prod .im{height:150px;border-radius:18px;background:#fff;display:grid;place-items:center}
+.prod .im img{height:140px}
+.prod h4{font:800 17px "Inter Display";margin:12px 4px 2px}
+.prod p{font-size:13px;color:var(--muted);margin:0 4px 12px}
+.prod .r{display:flex;justify-content:space-between;align-items:center;margin:0 4px}
+.toast{display:flex;gap:12px;align-items:center;background:var(--ink);color:#fff;border-radius:18px;padding:14px 16px;font:600 14px Inter}
+.toast .d{width:34px;height:34px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:var(--ink);font-weight:900}
+</style></head><body>
+<div class="head"><div><div class="tag">UI Kit · v1.0</div><h2 class="display" style="margin-top:12px">Стилевое руководство</h2></div><img src="assets/logo_horizontal.svg"></div>
+<div class="grid">
+  <div class="panel"><h6>Цвета</h6>
+    <div class="sw"><div style="background:#1F5136;color:#F6F1E4">Хвойный<small>#1F5136</small></div><div style="background:#5DBB63;color:#14271C">Свежая зелень<small>#5DBB63</small></div></div>
+    <div class="sw" style="margin-top:12px"><div style="background:#F6F1E4;color:#14271C;border:1.5px solid #E7E1D1">Льняной<small>#F6F1E4</small></div><div style="background:#F4A93B;color:#14271C">Тыквенный<small>#F4A93B</small></div><div style="background:#14271C;color:#fff">Текст<small>#14271C</small></div></div>
+  </div>
+  <div class="panel ty"><h6>Типографика · Inter Display / Inter</h6>
+    <div><span>H1 · Black 76</span><b class="display" style="font-size:44px">По кругу</b></div>
+    <div><span>H2 · Black 48</span><b class="display" style="font-size:32px">Как это работает</b></div>
+    <div><span>H3 · ExtraBold 24</span><h3>Собираете заказ</h3></div>
+    <div><span>Body · Regular 17</span><p style="font-size:16px">Привозим продукты в стекле.</p></div>
+    <div><span>Caption · Medium 13</span><p style="font-size:13px;color:var(--muted)">+ залог 50 ₽ за банку</p></div>
+  </div>
+  <div class="panel"><h6>Кнопки</h6>
+    <div class="row"><span class="lbl">Primary — default / hover / disabled</span><button class="btn btn-primary">Собрать заказ</button><button class="btn btn-primary hover">Собрать заказ</button><button class="btn btn-disabled">Недоступно</button></div>
+    <div class="row"><span class="lbl">Accent / Secondary / Ghost</span><button class="btn btn-accent">Оформить</button><button class="btn btn-secondary">Подробнее</button><button class="btn btn-ghost">Весь каталог →</button></div>
+    <div class="row"><span class="lbl">Small / Icon</span><button class="btn btn-primary btn-sm">В корзину</button><button class="btn btn-secondary btn-sm">Войти</button><button class="btn btn-primary btn-icon">→</button><button class="btn btn-accent btn-icon">+</button></div>
+  </div>
+  <div class="panel"><h6>Поля ввода</h6>
+    <div style="margin-bottom:16px"><label class="field-label">Default</label><div class="input">Ваш e-mail</div></div>
+    <div style="margin-bottom:16px"><label class="field-label">Focus</label><div class="input focus">ilya@mail.ru<span style="margin-left:auto;width:2px;height:22px;background:var(--dark)"></span></div><div class="hint">Пришлём код подтверждения</div></div>
+    <div style="margin-bottom:16px"><label class="field-label">Error</label><div class="input error">ilya@mail</div><div class="hint err">Проверьте адрес почты</div></div>
+    <div><label class="field-label">Search</label><div class="input">⌕&nbsp; Гречка, молоко, орехи…</div></div>
+  </div>
+  <div class="panel"><h6>Чипы, теги, контролы</h6>
+    <div class="row"><span class="chip active">Все</span><span class="chip">Крупы</span><span class="chip">Молочное</span><span class="chip">Овощи</span></div>
+    <div class="row"><span class="tag">хит</span><span class="tag" style="background:#FCE7D2">фермерское</span><span class="tag" style="background:var(--pumpkin)">наш круг</span></div>
+    <div class="row" style="gap:18px;margin-top:10px"><div class="toggle"></div><div class="toggle off"></div><div class="cb">✓</div><div class="cb off"></div><div class="radio"></div><div class="qty"><b>−</b>2<b>+</b></div></div>
+    <div class="toast" style="margin-top:18px"><div class="d">✓</div>Банка добавлена в круг — залог 50 ₽ вернётся бонусами</div>
+  </div>
+  <div class="panel"><h6>Карточка товара и иконки</h6>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
+      <div class="prod"><div class="im"><img src="assets/ill_jars.svg"></div><h4>Гречка ядрица</h4><p>600 г · банка 0,9 л</p><div class="r"><b class="display" style="font-size:20px">189 ₽</b><button class="btn btn-primary btn-sm" style="height:38px">В корзину</button></div></div>
+      <div class="icons" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;justify-items:center;padding-top:10px"><img src="assets/icon_order.svg"><img src="assets/icon_deliver.svg"><img src="assets/icon_return.svg"><img src="assets/icon_wash.svg"><img src="assets/favicon.svg"><img src="assets/icon_color.svg"></div>
+    </div>
+  </div>
+</div>
+</body></html>
