@@ -21,7 +21,7 @@ const THEME = {
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
 pres.title = "Зелёный Круг — айдентика бренда";
-pres.author = "Студент";
+pres.author = "Бачинский И.В., Мельников А.Н., Бахшинян Д.А.";
 pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
 const C = pres.SchemeColor;
 
@@ -74,7 +74,11 @@ txt(s, "Комплексное задание по компьютерной гр
 s.addImage({ path: IMG("logo_cream.png"), x: 0.7, y: 1.75, w: 6.6, h: 6.6 * 200 / 640, altText: "Логотип Зелёный Круг" });
 txt(s, "Разработка цифровой айдентики бренда", { x: 0.8, y: 4.0, w: 6.9, h: 0.5, fontSize: 22, bold: true, color: C.background2 });
 txt(s, "Сервис доставки продуктов в многоразовой таре", { x: 0.8, y: 4.6, w: 6.9, h: 0.4, fontSize: 18, color: C.accent4 });
-txt(s, "Работу выполнил(а): студент(ка) __ курса группы ____\n[Фамилия Имя]", { x: 0.8, y: 6.0, w: 6.6, h: 0.75, fontSize: 14, color: C.background2 });
+s.addText([
+  { text: "Работу выполнили студенты группы 2ИСИП-925:", options: { color: C.accent4, breakLine: true } },
+  { text: "Бачинский И.В., Мельников А.Н., Бахшинян Д.А.", options: { bold: true, breakLine: true } },
+  { text: "Проверила: Чеботарева Ю.А.", options: { color: C.accent4 } },
+], { isTextBox: true, x: 0.8, y: 5.55, w: 6.6, h: 1.1, margin: 0, fontSize: 14, color: C.background2, valign: "top", paraSpaceAfter: 4 });
 s.addShape(pres.shapes.OVAL, { x: 7.75, y: 1.0, w: 5.0, h: 5.0, fill: { color: C.accent4 }, line: { color: C.accent4, width: 0 }, objectName: "mascot circle" });
 s.addShape(pres.shapes.OVAL, { x: 7.5, y: 0.75, w: 5.5, h: 5.5, fill: { type: "none" }, line: { color: C.accent2, width: 4 }, objectName: "ring" });
 s.addImage({ path: IMG("mascot_front_transparent.png"), x: 7.65, y: 0.95, w: 5.2, h: 5.2, altText: "3D-талисман Кругляш" });
