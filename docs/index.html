@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><title>Зелёный Круг — продукты в многоразовой таре</title>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="color-scheme" content="only light"><meta name="darkreader-lock">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Зелёный Круг — продукты в многоразовой таре</title>
 <link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="style.css">
 <style>
 body{width:1440px}
 .wrap{width:1240px;margin:0 auto}
-.topbar{background:var(--dark);color:var(--cream);font:600 14px Inter;text-align:center;padding:10px 0}
+.topbar{background:var(--dark);color:var(--cream);font:600 14px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;text-align:center;padding:10px 0}
 .topbar b{color:var(--pumpkin)}
 header{display:flex;align-items:center;gap:36px;height:96px}
 header img{height:58px}
-nav{display:flex;gap:28px;font:600 16px Inter}
+nav{display:flex;gap:28px;font:600 16px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 nav a{color:var(--ink);text-decoration:none}
 nav a.on{color:var(--dark);box-shadow:inset 0 -3px 0 var(--green);padding-bottom:6px}
 .hdr-right{margin-left:auto;display:flex;gap:12px;align-items:center}
 .search{width:250px;height:48px;font-size:15px}
 .cart{position:relative;width:48px;height:48px;border-radius:50%;background:var(--dark);display:grid;place-items:center}
-.cart i{position:absolute;top:-4px;right:-4px;background:var(--pumpkin);color:var(--ink);font:800 12px Inter;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal}
+.cart i{position:absolute;top:-4px;right:-4px;background:var(--pumpkin);color:var(--ink);font:800 12px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal}
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center;padding:40px 0 70px}
 .hero h1 span{color:var(--green)}
 .hero p.lead{margin:26px 0 34px;max-width:540px}
 .hero .ctas{display:flex;gap:14px}
 .facts{display:flex;gap:34px;margin-top:44px}
-.facts div{font:500 14px Inter;color:var(--muted)}
-.facts b{display:block;font:900 30px "Inter Display";color:var(--dark);letter-spacing:-.02em}
+.facts div{font:500 14px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--muted)}
+.facts b{display:block;font:900 30px "Inter Display",Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--dark);letter-spacing:-.02em}
 .stage{position:relative;height:580px}
 .stage .disc{position:absolute;inset:30px 20px 10px 40px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#DDF2DF,#BFE3C4)}
 .stage .ring{position:absolute;inset:6px -4px -14px 16px;border-radius:50%;border:18px solid var(--dark);clip-path:polygon(0 0,62% 0,62% 30%,100% 30%,100% 100%,0 100%)}
 .stage .m3d{position:absolute;left:70px;top:40px;width:520px}
 .stage .st{position:absolute;width:150px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12))}
-.bubble{position:absolute;background:#fff;border-radius:20px;padding:14px 18px;font:600 15px Inter;box-shadow:0 14px 30px rgba(20,39,28,.12);display:flex;gap:10px;align-items:center}
-.bubble .dot{width:36px;height:36px;border-radius:50%;background:var(--pumpkin);display:grid;place-items:center;font:900 16px "Inter Display"}
+.bubble{position:absolute;background:#fff;border-radius:20px;padding:14px 18px;font:600 15px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;box-shadow:0 14px 30px rgba(20,39,28,.12);display:flex;gap:10px;align-items:center}
+.bubble .dot{width:36px;height:36px;border-radius:50%;background:var(--pumpkin);display:grid;place-items:center;font:900 16px "Inter Display",Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 section{padding:90px 0}
 .sec-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step{background:#fff;border-radius:var(--r-lg);padding:30px 26px;position:relative;border:1.5px solid #ECE6D6}
 .step img{width:76px;height:76px}
-.step .n{position:absolute;top:24px;right:26px;font:900 46px "Inter Display";color:#EDE7D7}
+.step .n{position:absolute;top:24px;right:26px;font:900 46px "Inter Display",Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#EDE7D7}
 .step h3{margin:18px 0 8px}
 .step p{color:var(--muted);line-height:1.5;font-size:15px}
 .cat{background:#fff;border-radius:48px;padding:70px 60px}
@@ -44,16 +48,16 @@ section{padding:90px 0}
 .prod .im{height:200px;border-radius:20px;background:#fff;display:grid;place-items:center;overflow:hidden;position:relative}
 .prod .im img{height:190px}
 .prod .im .tag{position:absolute;left:12px;top:12px;height:28px;font-size:11px}
-.prod h4{font:800 19px "Inter Display";margin:16px 4px 4px}
-.prod .meta{font:500 14px Inter;color:var(--muted);margin:0 4px 16px}
+.prod h4{font:800 19px "Inter Display",Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:16px 4px 4px}
+.prod .meta{font:500 14px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--muted);margin:0 4px 16px}
 .prod .row{display:flex;align-items:center;justify-content:space-between;margin:0 4px}
-.prod .price{font:900 22px "Inter Display"} .prod .price small{font:600 13px Inter;color:var(--muted);display:block}
+.prod .price{font:900 22px "Inter Display",Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif} .prod .price small{font:600 13px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--muted);display:block}
 .eco{background:linear-gradient(90deg,#1F5136 0,#1F5136 48%,rgba(31,81,54,.55) 75%,rgba(31,81,54,.3)),url(assets/pattern_dark_preview.svg) center/960px,#1F5136;border-radius:48px;color:var(--cream);padding:80px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;overflow:hidden}
 .eco h2{color:var(--cream)} .eco h2 span{color:var(--pumpkin)}
 .eco p{color:#CFE0D3;font-size:18px;line-height:1.55;margin:22px 0 30px;max-width:540px}
 .eco .nums{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .eco .num{background:rgba(246,241,228,.08);border:1.5px solid rgba(246,241,228,.2);border-radius:24px;padding:24px;backdrop-filter:blur(4px);background-color:#1F5136}
-.eco .num b{font:900 44px "Inter Display";color:var(--pumpkin);display:block;letter-spacing:-.02em}
+.eco .num b{font:900 44px "Inter Display",Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--pumpkin);display:block;letter-spacing:-.02em}
 .eco .num span{font-size:15px;color:#CFE0D3}
 .sub{display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:center;background:var(--pumpkin);border-radius:48px;padding:50px 70px}
 .sub img{width:260px}
@@ -61,7 +65,7 @@ section{padding:90px 0}
 .sub .input{border-color:transparent}
 footer{background:var(--ink);color:#C9D3CC;padding:60px 0 40px;margin-top:90px}
 footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
-footer h5{font:800 15px Inter;color:#fff;margin-bottom:14px}
+footer h5{font:800 15px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#fff;margin-bottom:14px}
 footer li{list-style:none;font-size:15px;margin-bottom:10px}
 footer .bot{border-top:1px solid #2B3D31;margin-top:40px;padding-top:24px;font-size:13px;display:flex;justify-content:space-between}
 </style></head><body>
