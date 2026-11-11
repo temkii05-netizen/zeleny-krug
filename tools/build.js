@@ -9,8 +9,8 @@ const VIDEO = path.join(__dirname, "..", "video", "ZelenyKrug_reklama.mp4");
 
 const THEME = {
   name: "Зелёный Круг",
-  headFontFace: "Arial",
-  bodyFontFace: "Arial",
+  headFontFace: "Times New Roman",
+  bodyFontFace: "Times New Roman",
   colors: {
     dk1: "14271C", lt1: "FFFFFF", dk2: "1F5136", lt2: "F6F1E4",
     accent1: "5DBB63", accent2: "F4A93B", accent3: "1F5136", accent4: "C6EBCF",
@@ -39,7 +39,6 @@ pres.defineSlideMaster({
     { text: { text: "Зелёный Круг · айдентика бренда", options: { x: 0.6, y: 7.0, w: 5, h: 0.3, fontSize: 10, color: C.accent5, margin: 0 } } },
     { placeholder: { options: { name: "title", type: "title", x: 1.25, y: 0.42, w: 11.4, h: 0.68, fontSize: 32, bold: true, color: C.text2, valign: "middle", align: "left", margin: 0 }, text: "" } },
   ],
-  slideNumber: { x: 12.3, y: 7.0, w: 0.5, h: 0.3, fontSize: 10, color: C.accent5, align: "right" },
 });
 pres.defineSlideMaster({
   title: "DARK",
@@ -49,7 +48,6 @@ pres.defineSlideMaster({
     { text: { text: "Зелёный Круг · айдентика бренда", options: { x: 0.6, y: 7.0, w: 5, h: 0.3, fontSize: 10, color: C.accent4, margin: 0 } } },
     { placeholder: { options: { name: "title", type: "title", x: 1.25, y: 0.42, w: 11.4, h: 0.68, fontSize: 32, bold: true, color: C.background2, valign: "middle", align: "left", margin: 0 }, text: "" } },
   ],
-  slideNumber: { x: 12.3, y: 7.0, w: 0.5, h: 0.3, fontSize: 10, color: C.accent4, align: "right" },
 });
 
 const shadow = () => ({ type: "outer", color: "14271C", blur: 14, offset: 4, angle: 90, opacity: 0.12 });
@@ -213,7 +211,7 @@ s.addText([
   "Блок «Наш круг» с цифрами",
   "Подписка на рассылку",
   "Подвал с контактами",
-].map((t, i, a) => ({ text: t, options: { bullet: { type: "number" }, breakLine: i < a.length - 1 } })),
+].map((t, i, a) => ({ text: t, options: { bullet: { indent: 14 }, breakLine: i < a.length - 1 } })),
   { isTextBox: true, x: 10.15, y: 1.85, w: 2.6, h: 4.6, margin: 0, fontSize: 13, color: C.text1, valign: "top", paraSpaceAfter: 8 });
 s.addNotes("Макет главной страницы для экрана 1440 px. Страница длинная, поэтому показана двумя частями: слева верх, справа низ.");
 
